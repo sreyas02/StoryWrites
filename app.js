@@ -13,14 +13,15 @@ const bodyParser = require('body-parser')
 
 
 // Load config
-
 dotenv.config({ path: './config/config.env' });
 
 // Passport config
 require('./config/passport')(passport);
 
+// connnect DB
 connectDB();
 
+// initialize app
 const app = express();
 
 // Body parser
